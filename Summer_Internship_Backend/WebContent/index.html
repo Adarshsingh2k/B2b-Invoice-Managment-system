@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Highradius</title>
+
+
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+	<header>
+
+		<span> <img src="./images/Group 20399.svg" alt=""></span>
+
+		<div class="fl-img">
+			<img src="./images/logo.svg" alt="">
+		</div>
+
+	</header>
+
+	<div class="in-txt">
+		<p>Invoice List</p>
+	</div>
+
+	<main>
+
+		<div class="container">
+
+			<div class="but-cont">
+				<div class="fun-butt">
+					<button data-modal-target="#add-mod" type="submit" onclick="" class="kk" id="add">+ Add</button>
+					<button data-modal-target="#edi-mod" type="submit" onclick="" disabled class="kk" id="edi"> <img
+							src="./images/Path 18191.svg" alt=""> Edit</button>
+					<button data-modal-target="#del-mod" type="submit" disabled class="kk" id="del">- Delete</button>
+				</div>
+
+
+
+				<div class="srch-bar">
+
+					<input type="text" name="Search" placeholder="Search for Invoice..." id="">
+					<img src="./images/search-24px (3).svg" alt="">
+
+
+
+				</div>
+
+			</div>
+
+
+
+			<table style="width: 100%;" id="table">
+
+				<thead>
+
+					<tr class="tr-head">
+						<th width="20px"><input type="checkbox" name="chk_all" id="chk_all" onclick="checkall(this)"
+								onchange="callFunction()"></th>
+						<th width="135px">Customer Name</th>
+						<th width="100px"> Customer #</th>
+						<th width="125px">Invoice #</th>
+						<th width="130px">Invoice Amount</th>
+						<th width="113px">Due Date</th>
+						<th width="200px" data-type="date">Predicted Payments Date</th>
+						<th width="190px">Notes</th>
+
+					</tr>
+
+				</thead>
+
+
+
+				<tbody id="tt">
+
+
+
+
+
+					<!--
+				<tr class="trc">
+					<td><input type="checkbox" onclick="chkboxcolor(this)" onchange="callFunction()" id="vhk" class="select" name=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onclick="chkboxcolor(this)" onchange="callFunction()" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onclick="chkboxcolor(this)" onchange="callFunction()" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				<tr class="trc">
+					<td><input type="checkbox" onchange="callFunction()" onclick="chkboxcolor(this)" class="select" name="" id=""></td>
+					<td>John Doe</td>
+					<td>001</td>
+					<td>154</td>
+					<td>458522</td>
+					<td>04-02-2021</td>
+					<td>04-05-2021</td>
+					<td class="elp">Lorem, ipsum dolor sit amet consectetu
+						r adipisicing elit. Libero, quod, cupiditate
+						 nobis alias dolores illo consectetur quibusdam ut eum ab distinctio nostrum quaerat reprehen
+						derit, sit quam error aliquam veniam eos.</td>
+
+				</tr>
+
+				 -->
+
+
+
+
+				</tbody>
+
+
+				<div class="pagination">
+					<div class="btn-1" onclick="prev()" id="btn_prev"><i class="fas fa-chevron-left aleft"></i></div>
+
+
+					<div class="btn-2" onclick="next()" id="btn_prev"><i class="fas fa-chevron-right aright"></i></div>
+				</div>
+
+			</table>
+
+		</div>
+
+	</main>
+
+	<!--Delete Modal-->
+
+	<div class="modal">
+		<div class="del-modal modal" id="del-mod">
+			<div class="del-head">
+				<div class="del-text">
+					Delete record(s)?
+				</div>
+				<button data-close-button class="close">
+					<img src="./images/baseline-close-24px.svg" alt="">
+				</button>
+
+			</div>
+
+			<div class="del-body">
+				You'll lose your record(s) after this action.
+				We can't recover them once you delete.
+				<br>
+				<br>
+				Are you sure you want to <span style="color: #FF5E5E;">permanently delete </span> them?
+			</div>
+
+			<div class="del-foot">
+
+				<button data-close-button class="close" style="background-color: transparent;">Cancel</button>
+				<button onclick="deleteRow()" style="background-color: #14AFF1 ; " type="submit" id="dbtn">
+					Delete</button>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Add Modal-->
+
+	<div class="add-modal modal" id="add-mod">
+		<div class="add-head">
+			<div class="add-text">
+				Add Invoice
+			</div>
+			<button data-close-button class="close">
+				<img src="./images/baseline-close-24px.svg" alt="">
+			</button>
+
+		</div>
+		<form action="http://localhost:8080/H2HBABBA2738/addfo" method="POST">
+			<div class="add-body">
+
+
+
+				<div class="left">
+					<ul>
+						<li>
+							<label for="cust-name"> Customer Name <span class="req">*</span> </label>
+							<input type="text" name="name" id="cust-name" required>
+						</li>
+
+						<li>
+							<label for="cust-num"> Customer No.<span class="req">*</span> </label>
+							<input type="text" name="cno" id="cust-num" required>
+
+						</li>
+
+						<li>
+							<label for="inv-num"> Invoice No.<span class="req">*</span> </label>
+							<input type="text" name="invno" id="inv-num" required>
+						</li>
+
+
+						<li>
+							<label for="inv-amt"> Invoice Amount <span class="req">*</span></label>
+							<input type="text" name="invamt" id="inv-amt" required>
+						</li>
+					</ul>
+
+
+
+				</div>
+
+
+				<!--Right part of modal-->
+				<div class="right">
+					<ul>
+						<li>
+							<label for="due-date">Due Date <span class="req">*</span></label>
+							<input type="date" name="ddt" id="due-date" required>
+						</li>
+						<li>
+							<label for="notes">Notes</label>
+							<textarea name="note" id="notes" cols="30" rows="10"></textarea>
+						</li>
+					</ul>
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+			<div class="add-foot">
+
+				<div class="left">
+					<button data-close-button class="close"
+						style="background-color: transparent; border: none; color: #14AFF1;">Cancel</button>
+				</div>
+
+				<div class="right">
+					<button type="reset"
+						style="background-color: transparent; border:1px solid #14AFF1;  color: white;height:34px">Clear</button>
+					<button onclick="" type="submit"
+						style="background-color: #14AFF1; color: white; border: none; margin-left: 5px ;height:34px ; width: 44px; ">
+						Add</button>
+
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+	<!---Edit Invoice-->
+	<div class="modal">
+		<div class="edi-modal modal" id="edi-mod">
+			<div class="edi-head">
+				<div class="edi-text">
+					Edit Invoice
+				</div>
+				<button data-close-button class="close">
+					<img src="./images/baseline-close-24px.svg" alt="">
+				</button>
+
+			</div>
+			<form action="">
+				<div class="edi-body">
+					<ul style="list-style: none;">
+						<li>
+							<label for="inv-amt">Invoice Amount</label>
+							<input type="text" name="" id="">
+						</li>
+						<br>
+						<br>
+						<li>
+							<label for="notes"> Notes</label>
+							<textarea name="notes" id="" cols="30" rows="10"></textarea>
+						</li>
+					</ul>
+
+
+
+
+				</div>
+
+				<div class="edi-foot">
+					<div class="left">
+						<button data-close-button
+							style="background-color: transparent; border: none; color: #14AFF1;">Cancel</button>
+					</div>
+
+					<div class="right">
+						<button type="reset"
+							style="background-color: transparent; border:1px solid #14AFF1;  color: white;">Reset</button>
+						<!-- <button  type="reset" style="background-color: transparent; border:1px solid #14AFF1;  color: white;">Clear</button> -->
+						<button onclick=""
+							style="background-color: #97A1A9; color: white; border: none; margin-left: 5px; ">
+							Save</button>
+
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="overlay"></div>
+
+
+
+	<script src="./js/app.js" defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+body {
+    background-image: linear-gradient(120deg, #58687E, #39495E);
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    margin-top: 20px;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+/* Header Text */
+header span {
+    top: 16px;
+    left: 86px;
+    width: 233px;
+    height: 52px;
+    text-align: left;
+    padding-left: 30px;
+    font: normal normal bold 39px/52px Futura PT;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+
+}
+
+/* Logo Image */
+.fl-img {
+    display: flex;
+    justify-content: center;
+    margin-top: -3%;
+}
+
+.in-txt p {
+    padding-left: 30px;
+
+    font-size: 32px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: #FFFFFF;
+
+}
+
+main {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+/* Container */
+.container {
+
+    width: 90%;
+
+    height: auto;
+    background: #273D49CC;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 50px;
+
+}
+
+.but-cont {
+    float: right;
+    display: inline-flex;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    padding-right: 25px;
+
+}
+
+
+.fun-butt button {
+    border: 1px solid #97A1A9;
+    border-radius: 10px;
+    margin-right: 1rem;
+    width: 99px;
+    height: 45px;
+    background-color: transparent;
+    color: #97A1A9;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+.fun-butt button:hover {
+    border: 1px solid #14AFF1;
+    border-radius: 10px;
+    margin-right: 1rem;
+    width: 99px;
+    height: 45px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+/* Search BAR*/
+.srch-bar {
+    position: relative;
+}
+
+.srch-bar:hover {
+
+    border: 1px solid #14AFF1;
+    border-radius: 10px;
+    background-color: transparent;
+
+}
+
+.srch-bar input {
+    border: 1px solid #356680;
+    border-radius: 10px;
+    width: 199px;
+    height: 45px;
+    background-color: #283A46;
+    color: white;
+}
+
+.srch-bar input::placeholder {
+    color: #97A1A9;
+    text-align: left;
+    padding-left: 15px;
+}
+
+
+
+.srch-bar img {
+    position: absolute;
+    bottom: 8px;
+    left: 170px;
+    width: 32px;
+    height: 32px;
+}
+
+/* TABLE */
+
+table {
+    border-collapse: collapse;
+
+
+
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+tr,
+td {
+    padding: 0;
+}
+
+thead tr {
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    height: 50px;
+    color: #97A1A9;
+    border-bottom: 2px solid #283A46;
+
+
+}
+
+tbody tr:first-child {
+
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    height: 50px;
+    text-align: center;
+
+}
+
+tbody tr:nth-child(2n+2) {
+    background: #283A46 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    height: 50px;
+    text-align: center;
+
+
+
+}
+
+.select {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -10;
+
+}
+
+.elp {
+    max-width: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.elp:hover {
+    text-overflow: none;
+
+    white-space: normal;
+    background-color: #2A5368;
+    color: #FFFFFF;
+
+}
+
+tbody tr:nth-child(2n+3) {
+
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    height: 50px;
+    text-align: center;
+}
+
+
+/* Delete Modal*/
+
+.del-modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(0);
+    background-color: #2A3F4D;
+    box-shadow: 0px 8px 24px #00000029;
+    border-radius: 6px;
+    width: 40%;
+    height: auto;
+    z-index: 10;
+}
+
+.del-modal.active {
+    transform: translate(-50%, 50%) scale(1);
+}
+
+.del-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1A262F;
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-right: 29px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 28px;
+
+}
+
+.del-head button {
+    background-color: transparent;
+    border: none;
+}
+
+.del-body {
+
+    border-bottom: 2px solid #1A262F;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #C0C6CA;
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.del-foot {
+    float: right;
+    display: flexbox;
+    justify-content: space-between;
+    padding-right: 30px;
+    height: 50px;
+}
+
+.del-foot button {
+    color: white;
+    border-color: #14AFF1;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/*delete modal end*/
+
+/* Add modal */
+
+.add-modal {
+    position: fixed;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(0);
+    background-color: #2A3F4D;
+    box-shadow: 0px 8px 24px #00000029;
+    border-radius: 6px;
+    width: 65%;
+    height: auto;
+    z-index: 10;
+}
+
+.add-modal.active {
+    transform: translate(-50%, 50%) scale(1);
+}
+
+.add-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1A262F;
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-right: 29px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 28px;
+
+}
+
+.add-head button {
+    background-color: transparent;
+    border: none;
+}
+
+.add-body {
+
+    border-bottom: 2px solid #1A262F;
+
+    font-size: 20px;
+    color: #C0C6CA;
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 100%;
+
+
+
+
+}
+
+.add-body .left {
+    float: left;
+
+}
+
+.add-body label {
+    display: inline-flex;
+
+
+    text-align: right;
+    width: 200px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.add-body input {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+    background-color: #283A46;
+    border: 1px solid #356680;
+    color: white;
+    border-radius: 4px;
+}
+
+.add-body input:hover {
+    border: 1px solid #14AFF1;
+
+    background-color: transparent;
+    color: white;
+
+}
+
+#due-date {
+    height: 30px;
+    width: 220px;
+    margin-left: 0px;
+    font-size: 1rem;
+}
+
+#due-date:hover {
+
+    border: 1px solid #14AFF1;
+
+    background-color: transparent;
+    color: white;
+
+}
+
+.add-body .right {
+
+    float: right;
+
+}
+
+.add-body ul {
+    list-style: none;
+}
+
+.add-body textarea {
+    vertical-align: top;
+    background-color: #283A46;
+    border: 1px solid #356680;
+    color: white;
+    border-radius: 4px;
+}
+
+.add-foot {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 60px;
+
+    padding-top: 35px;
+}
+
+.add-foot .left {
+    float: left;
+}
+
+.add-foot .right {
+    float: right;
+}
+
+.add-foot button {
+    border-radius: 4px;
+    font-size: 20px;
+    height: auto;
+    padding-top: 4px;
+
+}
+
+/*Add invoice ends*/
+
+/* Edit invoice */
+
+.edi-modal {
+    position: fixed;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(0);
+    background-color: #2A3F4D;
+    box-shadow: 0px 8px 24px #00000029;
+    border-radius: 6px;
+    width: 35%;
+    height: auto;
+    z-index: 10;
+}
+
+.edi-modal.active {
+    transform: translate(-50%, 50%) scale(1);
+}
+
+.edi-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1A262F;
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-right: 29px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 28px;
+
+}
+
+.edi-head button {
+    background-color: transparent;
+    border: none;
+}
+
+.edi-body {
+
+    border-bottom: 2px solid #1A262F;
+
+    font-size: 20px;
+    color: #C0C6CA;
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 100%;
+
+
+
+
+}
+
+.edi-body label {
+    display: inline-flex;
+
+
+    text-align: right;
+    width: 200px;
+    line-height: 26px;
+    margin-bottom: 10px;
+
+}
+
+.edi-body input {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+    background-color: #283A46;
+    border: 1px solid #356680;
+    color: white;
+    border-radius: 4px;
+}
+
+.edi-body textarea {
+    vertical-align: top;
+    background-color: #283A46;
+    border: 1px solid #356680;
+    color: white;
+    border-radius: 4px;
+}
+
+.edi-foot {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 60px;
+
+    padding-top: 35px;
+}
+
+.edi-foot .left {
+    float: left;
+}
+
+.edi-foot .right {
+    float: right;
+}
+
+.edi-foot button {
+    border-radius: 4px;
+    font-size: 20px;
+    height: auto;
+    padding-top: 4px;
+
+}
+
+
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 0.7;
+    pointer-events: all;
+}
+
+/* Pagination */
+
+.pagination {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 18rem;
+    left: -2rem;
+    width: 89.5rem;
+}
+
+.req {
+    color: red;
+}
+
+.btn-1 {
+
+    top: -6.5rem;
+
+    height: 2rem;
+    width: 2rem;
+    background-color: #708596;
+    border-radius: 50rem;
+    color: #fff;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-1:hover {
+    background-color: #14aff1;
+}
+
+.btn-2 {
+    /* position: relative; */
+    top: -6.5rem;
+    /* left: -10.2rem; */
+    right: 50rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: #708596;
+    border-radius: 50rem;
+    color: #fff;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-2:hover {
+    background-color: #14aff1;
+}
+
+.aleft {
+    font-size: 1rem;
+    position: relative;
+    top: 0.54rem;
+    left: 0.54rem;
+}
+
+.aright {
+    font-size: 1rem;
+    position: relative;
+
+    top: 0.4rem;
+    right: -0.8rem;
+}
+
+input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    top: 12px;
+    left: 5px;
+    vertical-align: bottom;
+
+
+}
+
+input[type=checkbox]:after {
+    content: "";
+    background-color: transparent;
+    display: block;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked:after {
+    opacity: 1;
+
+}
